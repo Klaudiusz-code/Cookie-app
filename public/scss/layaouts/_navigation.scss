@@ -1,0 +1,14 @@
+.nav{
+  background-color: rgba(255, 255, 255,0.1);
+  width: 100%;
+  padding: 10px 0;
+  @include d-flex{
+    justify-content: center;
+  }
+
+  &__logo{
+    color: $color-white;
+    font-size: $font-size-logo;
+    font-family: $main-font;
+  }
+}
