@@ -1,0 +1,12 @@
+.prev{
+  margin-top: 50px;
+  @include d-flex{
+    justify-content: center;
+  }
+  &__cookie{
+      width: 610px;
+      height: 610px;
+      background-position: center;
+      background-size: cover;
+  }
+}
