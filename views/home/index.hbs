@@ -1,1 +1,31 @@
-{{> cookie-preview}}
+<div class="container">
+    <div class="selected">
+        <h2 class="selected__title">Wybierz rodzaj ciastka</h2>
+        <ul class="selected__wrapper">
+            <li class="selected__cookie-item">
+                {{#each bases}}
+                    <a class="selected__cookie-link" href="/configurator/select-base/{{this.[0]}}">Wybierz {{this.[0]}} za {{this.[1]}}</a>
+                {{/each}}
+            </li>
+        </ul>
+    </div>
+
+    <main class="main">
+        <div class="main__addon">
+            <ul class="main__addon-wrapper">
+                <li class="main__addon-item">
+                    {{#each addons}}
+                        <a class="main__addon-link" href="/configurator/add-addon/{{this.[0]}}">Dodaj {{this.[0]}} za {{this.[1]}}</a>
+                    {{/each}}
+                </li>
+            </ul>
+        </div>
+        <div class="main__preview-container">
+            {{> cookie-preview}}
+        </div>
+        <div class="main__extra-container">
+            {{> addons}}
+        </div>
+    </main>
+
+</div>
