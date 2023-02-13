@@ -1,0 +1,7 @@
+<h3>Wybór Dodatków</h3>
+<ul>
+            Base: {{cookie.base}} -- {{find-price bases cookie.base}} PLN
+            {{#each cookie.addons}}
+                <li>Dodatek: {{this}} -- {{find-price @root.addons this}}PLN</li>
+            {{/each}}
+</ul>
