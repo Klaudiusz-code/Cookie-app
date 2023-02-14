@@ -3,7 +3,7 @@ const cookieParser = require('cookie-parser')
 const {engine} = require('express-handlebars')
 const {homeRouter} = require("./routes/home");
 const {configuratorRouter} = require("./routes/configurator");
-const {handlebarsExpress} = require("./handlebars-express");
+const {handlebarsExpress} = require("./utils/handlebars-helpers");
 
 const app = express();
 
