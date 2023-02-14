@@ -10,6 +10,7 @@
 
 body {
   background-color: #203843;
+  font-family: "Poppins", sans-serif;
 }
 
 a {
@@ -62,33 +63,34 @@ img, svg {
 
 .selected {
   width: 100%;
-  margin: 20px 0;
+  margin: 35px 0;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
 }
 
 .selected__title {
   color: #fff;
-  font-family: "Poppins", sans-serif;
   font-size: 24px;
 }
 
 .selected__wrapper {
   padding: 10px 0;
+  text-align: center;
+  width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .selected__cookie-link {
   background-color: rgba(181, 201, 232, 0.3);
   padding: 3px 10px;
+  margin-right: 25px;
   border-radius: 4px;
   color: #fff;
-  font-family: "Poppins", sans-serif;
 }
 
 .main {
@@ -97,22 +99,60 @@ img, svg {
   justify-content: space-between;
 }
 
+.main .main__addon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .main .main__addon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.main .main__addon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  width: 200px;
+  height: 43px;
+  background-color: rgba(181, 201, 232, 0.3);
+  border-radius: 6px;
+  color: #fff;
+}
+
+.cookie__title {
+  font-size: 28px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.cookie__list {
+  display: flex;
+  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
+  list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.main .main__addon-item {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  gap: 10px;
+.cookie__item {
+  margin-bottom: 5px;
 }
 
-.main .main__addon-link {
-  padding: 4px 10px;
-  background-color: rgba(181, 201, 232, 0.3);
-  color: #fff;
-  font-family: "Poppins", sans-serif;
+.cookie__item--base {
+  font-weight: bold;
+  color: #5beaea;
+}
+
+.cookie__item--addon {
+  color: white;
+}
+
+.cookie__total-price {
+  color: #5beaea;
 }
