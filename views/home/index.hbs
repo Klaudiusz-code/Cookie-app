@@ -13,18 +13,27 @@
     <main class="main">
         <div class="main__addon">
             <ul class="main__addon-wrapper">
-                <li class="main__addon-item">
-                    {{#each addons}}
-                        <a class="main__addon-link" href="/configurator/add-addon/{{this.[0]}}">Dodaj {{this.[0]}} za {{this.[1]}}</a>
-                    {{/each}}
-                </li>
+            {{#if cookie.base}}
+                {{#each addons}}
+                    {{#if (isNotOnArray @root.cookie.addons this.[0])}}
+                    <li>
+                        <a class="main__addon-link" href="/configurator/add-addon/{{this.[0]}}">Dodaj {{this.[0]}} za {{this.[1]}} ZŁ</a>
+                    </li>
+                    {{/if}}
+                {{/each}}
+            {{/if}}
             </ul>
         </div>
         <div class="main__preview-container">
-            {{> cookie-preview}}
+            {{#if cookie.base}}
+                {{> cookie-preview}}
+            {{/if}}
         </div>
         <div class="main__extra-container">
-            {{> addons}}
+            {{#if cookie.base}}
+                {{> addons}}
+            {{/if}}
+
         </div>
     </main>
 
