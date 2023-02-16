@@ -1,0 +1,11 @@
+.success{
+  width: 100%;
+  text-align: center;
+
+  &__title{
+    color: $color-white;
+  }
+  &__result{
+    color: #5beaea;
+  }
+}

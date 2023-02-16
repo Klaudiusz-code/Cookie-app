@@ -1,0 +1,14 @@
+.error{
+  background-color: #a56666;
+  width: 100%;
+  text-align: center;
+    &__title{
+      color: $color-white;
+      font-size: $font-size-list;
+      font-weight: $font-bold;
+      letter-spacing: 3px;
+    }
+  &__description{
+    color: $color-white;
+  }
+}
