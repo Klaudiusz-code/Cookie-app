@@ -4,12 +4,11 @@
         <ul class="selected__wrapper">
             <li class="selected__cookie-item">
                 {{#each bases}}
-                    <a class="selected__cookie-link" href="/configurator/select-base/{{this.[0]}}">Wybierz {{this.[0]}} za {{this.[1]}}</a>
+                    <a class="btn btn__base" href="/configurator/select-base/{{this.[0]}}">Wybierz {{this.[0]}} za {{this.[1]}}</a>
                 {{/each}}
             </li>
         </ul>
     </div>
-
     <main class="main">
         <div class="main__addon">
             <ul class="main__addon-wrapper">
@@ -17,7 +16,7 @@
                 {{#each addons}}
                     {{#if (isNotOnArray @root.cookie.addons this.[0])}}
                     <li>
-                        <a class="main__addon-link" href="/configurator/add-addon/{{this.[0]}}">Dodaj {{this.[0]}} za {{this.[1]}} ZŁ</a>
+                        <a class="btn btn__addons" href="/configurator/add-addon/{{this.[0]}}">Dodaj {{this.[0]}} za {{this.[1]}} ZŁ</a>
                     </li>
                     {{/if}}
                 {{/each}}
@@ -32,8 +31,8 @@
         <div class="main__extra-container">
             {{#if cookie.base}}
                 {{> addons}}
+                <a href="/order/summary" class="btn btn__order">Zamów</a>
             {{/if}}
-
         </div>
     </main>
 
