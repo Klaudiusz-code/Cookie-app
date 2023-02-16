@@ -1,0 +1,44 @@
+.btn{
+  padding: 10px 30px;
+
+  &__base{
+    background-color: $color-btn;;
+    color: $color-white;
+    margin: 10px;
+  }
+
+  &__addons{
+    @include d-flex{
+      justify-content: center;
+    }
+    padding: 0;
+    width: 250px;
+    height: 45px;
+    border-radius: 13px;
+    margin-top: 20px;
+    color: $color-white;
+    border: 3px solid $color-btn;
+    transition: 0.2s background-color ease-in-out;
+
+    &:hover{
+      background-color: $color-btn;
+    }
+  }
+  &__order{
+    margin-top: 20px;
+    background-color: $color-btn;
+    display: block;
+    text-align: center;
+    color: $color-white;
+  }
+  &__go-home{
+    @include d-flex{
+      justify-content: center;
+    }
+    color: #a75656;
+
+    .bx{
+      font-size: $font-size-list;
+    }
+  }
+}
