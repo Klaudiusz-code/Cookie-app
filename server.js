@@ -4,6 +4,7 @@ const {engine} = require('express-handlebars')
 const {homeRouter} = require("./routes/home");
 const {configuratorRouter} = require("./routes/configurator");
 const {handlebarsExpress} = require("./utils/handlebars-helpers");
+const {orderRouter} = require("./routes/order");
 
 const app = express();
 
@@ -20,5 +21,6 @@ app.set('views', './views');
 
 app.use('/',homeRouter)
 app.use('/configurator', configuratorRouter)
+app.use('/order',orderRouter)
 
 app.listen(3000)
