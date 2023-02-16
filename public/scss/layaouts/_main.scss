@@ -26,17 +26,18 @@
     font-size: $font-size-list;
   }
   &__wrapper{
-    padding: 10px 0;
+    padding: 25px 0;
     text-align: center;
     width: 100%;
-    @include d-flex {
-      flex-direction: column;
-      justify-content: space-between;
+
+      @include d-flex{
+          justify-content: center;
       }
     }
     &__cookie-link{
     background-color: $color-link;
       padding: 3px 10px;
+      margin-top: 20px;
       margin-right: 25px;
       border-radius: 4px;
       color: $color-white;
@@ -88,14 +89,14 @@
     margin-bottom: 5px;
     &--base {
       font-weight: bold;
-      color: #5beaea;
+      color: $color-white;
     }
     &--addon {
       color: white;
      }
   }
   &__total-price{
-    color: #5beaea;
+    color: $color-btn;
   }
  }
 
