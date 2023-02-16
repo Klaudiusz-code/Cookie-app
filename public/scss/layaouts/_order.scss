@@ -1,0 +1,10 @@
+.order{
+  width: 100%;
+  text-align: center;
+
+  &__title{
+    padding-top: 30px;
+    color: $color-white;
+    font-size: $font-size-logo;
+  }
+}
