@@ -8,18 +8,21 @@
     justify-content: center;
   }
   &__cookie{
-      width: 610px;
-      height: 610px;
+      width: 510px;
+      height: 510px;
       background-position: center;
-      background-size: cover;
+    @include for-phone{
+      width: 350px;
+      height: 350px;
+    }
   }
 }
 .selected{
   width: 100%;
   margin: 35px 0;
     @include d-flex{
-    justify-content: space-between;
-    flex-direction: column;
+      justify-content: space-between;
+      flex-direction: column;
   }
   &__title{
     color: $color-white;
@@ -27,25 +30,27 @@
   }
   &__wrapper{
     padding: 25px 0;
-    text-align: center;
     width: 100%;
-
-      @include d-flex{
-          justify-content: center;
-      }
     }
-    &__cookie-link{
-    background-color: $color-link;
-      padding: 3px 10px;
-      margin-top: 20px;
-      margin-right: 25px;
-      border-radius: 4px;
-      color: $color-white;
-   }
+  &__cookie-item{
+    @include d-flex{
+      justify-content: center;
+    }
+    @include for-phone{
+      flex-direction: column;
+    }
+  }
   }
 .main{
    @include d-flex{
       justify-content: space-between;
+    }
+    @include for-tablet{
+      flex-direction: column;
+    }
+    @include for-phone{
+      flex-direction: column;
+      gap: 20px;
     }
   .main__addon{
     @include d-flex{
@@ -99,4 +104,47 @@
     color: $color-btn;
   }
  }
+.base{
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
 
+  &__title{
+    color: $color-link;
+    font-weight: 400;
+  }
+  &__result{
+    font-size: $font-size-logo;
+    color: $color-btn;
+    text-decoration: underline;
+  }
+
+}
+.addon{
+  width: 100%;
+  text-align: center;
+
+  &__title{
+    color: $color-link;
+    font-weight: 400;
+  }
+  &__result{
+    font-size: $font-size-logo;
+    color: $color-btn;
+    text-decoration: underline;
+  }
+}
+.deleted{
+  width: 100%;
+  text-align: center;
+
+  &__title{
+    color: $color-red;
+    font-weight: 400;
+  }
+  &__result{
+    font-size: $font-size-logo;
+    color: $color-btn;
+    text-decoration: underline;
+  }
+}
