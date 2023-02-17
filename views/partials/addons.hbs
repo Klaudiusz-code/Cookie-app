@@ -3,7 +3,7 @@
     <ul class="cookie__list">
         <li class="cookie__item cookie__item--base">Baza: <span class="cookie__base">{{cookie.base}}</span> -- <span class="cookie__price">{{pricify (findPrice bases cookie.base)}} PLN</span></li>
         {{#each cookie.addons}}
-                <li class="cookie__item cookie__item--addon">Dodatek: <span class="cookie__addon">{{this}}</span> -- <span class="cookie__price">{{findPrice @root.addons this}} PLN</span><a href="/configurator/delete-addon/{{this}}">Delete</a></li>
+                <li class="cookie__item cookie__item--addon">Dodatek: <span class="cookie__addon">{{this}}</span> -- <span class="cookie__price">{{findPrice @root.addons this}} PLN</span><a class="btn btn__delete" href="/configurator/delete-addon/{{this}}">Usuń</a></li>
         {{/each}}
     </ul>
     <p class="cookie__total-price">Całość kosztuje {{pricify sum}} ZŁ</p>
