@@ -55,10 +55,16 @@ img, svg {
 }
 
 .prev__cookie {
-  width: 610px;
-  height: 610px;
+  width: 510px;
+  height: 510px;
   background-position: center;
-  background-size: cover;
+}
+
+@media (max-width: 480px) {
+  .prev__cookie {
+    width: 350px;
+    height: 350px;
+  }
 }
 
 .selected {
@@ -77,26 +83,38 @@ img, svg {
 
 .selected__wrapper {
   padding: 25px 0;
-  text-align: center;
   width: 100%;
+}
+
+.selected__cookie-item {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.selected__cookie-link {
-  background-color: rgba(181, 201, 232, 0.3);
-  padding: 3px 10px;
-  margin-top: 20px;
-  margin-right: 25px;
-  border-radius: 4px;
-  color: #fff;
+@media (max-width: 480px) {
+  .selected__cookie-item {
+    flex-direction: column;
+  }
 }
 
 .main {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+@media (max-width: 1090px) {
+  .main {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 .main .main__addon {
@@ -155,6 +173,55 @@ img, svg {
 
 .cookie__total-price {
   color: #a56666;
+}
+
+.base {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.base__title {
+  color: rgba(181, 201, 232, 0.3);
+  font-weight: 400;
+}
+
+.base__result {
+  font-size: 35px;
+  color: #a56666;
+  text-decoration: underline;
+}
+
+.addon {
+  width: 100%;
+  text-align: center;
+}
+
+.addon__title {
+  color: rgba(181, 201, 232, 0.3);
+  font-weight: 400;
+}
+
+.addon__result {
+  font-size: 35px;
+  color: #a56666;
+  text-decoration: underline;
+}
+
+.deleted {
+  width: 100%;
+  text-align: center;
+}
+
+.deleted__title {
+  color: #de4444;
+  font-weight: 400;
+}
+
+.deleted__result {
+  font-size: 35px;
+  color: #a56666;
+  text-decoration: underline;
 }
 
 .order {
@@ -227,18 +294,22 @@ img, svg {
 }
 
 .btn__order {
-  margin-top: 20px;
+  display: inline-block;
+  margin-top: 10px;
   background-color: #a56666;
-  display: block;
   text-align: center;
   color: #fff;
+}
+
+.btn__delete {
+  color: #de4444;
 }
 
 .btn__go-home {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #a75656;
+  color: #de4444;
 }
 
 .btn__go-home .bx {
