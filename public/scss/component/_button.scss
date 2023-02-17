@@ -25,17 +25,20 @@
     }
   }
   &__order{
-    margin-top: 20px;
+    display: inline-block;
+    margin-top: 10px;
     background-color: $color-btn;
-    display: block;
     text-align: center;
     color: $color-white;
+  }
+  &__delete{
+    color: $color-red;
   }
   &__go-home{
     @include d-flex{
       justify-content: center;
     }
-    color: #a75656;
+    color: $color-red;
 
     .bx{
       font-size: $font-size-list;
